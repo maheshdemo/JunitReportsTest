@@ -2,8 +2,14 @@ package org.sample;
 
 import java.io.File;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+import org.w3c.dom.Document;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -21,6 +27,14 @@ public class AppTest
         driver.get("http://google.com/");
         driver.quit();
         Assert.assertTrue(true);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.fail("Unable to verify url pointing to denmark");
+        softAssert.fail("Unable to verify url pointing to newzelanad");
+        softAssert.fail("Unable to verify url pointing to pakistan");
+        softAssert.fail("Unable to verify url pointing to angola");
+        softAssert.fail("Unable to verify url pointing to england");
+        softAssert.fail("Unable to verify url pointing to pyongyang");
+        
 	}
 	
 	
@@ -42,6 +56,24 @@ public class AppTest
         driver.get("http://google.com/");
         driver.quit();
         Assert.assertFalse(true,"Unable to verify due to locator failure");
+        
+        
+        
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        try {
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(new File("test-output\\junitreports\\TEST-org.sample.Junit.Junit.AppTest.xml"));
+			
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
 	}
 	
  }

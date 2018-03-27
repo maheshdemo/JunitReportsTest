@@ -26,7 +26,6 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("http://google.com/");
         driver.quit();
-        Assert.assertTrue(true);
         SoftAssert softAssert = new SoftAssert();
         softAssert.fail("Unable to verify url pointing to denmark");
         softAssert.fail("Unable to verify url pointing to newzelanad");

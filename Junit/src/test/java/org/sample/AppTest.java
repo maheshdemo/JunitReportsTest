@@ -27,13 +27,13 @@ public class AppTest
         driver.get("http://google.com/");
         driver.quit();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.fail("Unable to verify url pointing to denmark");
-        softAssert.fail("Unable to verify url pointing to newzelanad");
-        softAssert.fail("Unable to verify url pointing to pakistan");
-        softAssert.fail("Unable to verify url pointing to angola");
-        softAssert.fail("Unable to verify url pointing to england");
-        softAssert.fail("Unable to verify url pointing to pyongyang");
-        
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark");
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark1");
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark2");
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark3");
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark4");
+        softAssert.assertFalse(true, "Unable to verify url pointing to denmark5");
+               
 	}
 	
 	

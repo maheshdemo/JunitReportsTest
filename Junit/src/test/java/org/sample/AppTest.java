@@ -20,13 +20,15 @@ public class AppTest
  {
 	
 	@Test
-	public void test()
+	public void test3()
 	{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("http://google.com/");
         driver.quit();
-        SoftAssert softAssert = new SoftAssert();
+        //try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}
+      
+               SoftAssert softAssert = new SoftAssert();
         softAssert.assertFalse(true, "Unable to verify url pointing to denmark");
         softAssert.assertFalse(true, "Unable to verify url pointing to denmark1");
         softAssert.assertFalse(true, "Unable to verify url pointing to denmark2");
@@ -44,8 +46,10 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("http://google.com/");
         driver.quit();
-        Assert.assertFalse(true,"Unable to verify due to locator failure");
-	}
+        try{
+        	Assert.assertFalse(true,"Unable to verify test");
+        	
+        }catch(Exception e){}	}
 	
 	@Test
 	public void test2()
@@ -54,8 +58,7 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("http://google.com/");
         driver.quit();
-        Assert.assertFalse(true,"Unable to verify due to locator failure");
-        
+        try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}      
         
         
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

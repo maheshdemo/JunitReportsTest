@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 22.103 sec <<< FAILURE! - in TestSuite
-test1(org.sample.AppTest)  Time elapsed: 7.86 sec  <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 33.029 sec <<< FAILURE! - in TestSuite
+test1(org.sample.AppTest)  Time elapsed: 13.561 sec  <<< FAILURE!
 java.lang.AssertionError: Unable to verify test expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertFalse(Assert.java:63)
 	at org.sample.AppTest.test1(AppTest.java:50)
 
-test2(org.sample.AppTest)  Time elapsed: 6.787 sec  <<< FAILURE!
+test2(org.sample.AppTest)  Time elapsed: 8.179 sec  <<< FAILURE!
 java.lang.AssertionError: Unable to verify test expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)

@@ -107,8 +107,12 @@ public class AppTest
 			failure1.appendChild(txt1);
 			
 			
-			
-			
+			Element ts2 = doc.createElement("testcase");
+			ts2.setAttribute("name","test1");
+			ts2.setAttribute("time","45.989");
+			ts2.setAttribute("classname","Validating New Zeleand");			
+			tsSuite.appendChild(ts2);
+			ts2.appendChild(failure1);
 			
 			Transformer tf = TransformerFactory.newInstance().newTransformer();
 			tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");

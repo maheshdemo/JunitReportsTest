@@ -117,13 +117,13 @@ public class AppTest
 			Element ts3 = doc.createElement("testcase");
 			ts3.setAttribute("name","test3");
 			ts3.setAttribute("time","45.989");
-			ts3.setAttribute("classname","Validating New Zeleand");			
+			ts3.setAttribute("classname","Validating New Zeleand1");			
 			tsSuite.appendChild(ts3);
 			ts3.appendChild(failure1);
 			Element ts4 = doc.createElement("testcase");
 			ts4.setAttribute("name","test4");
 			ts4.setAttribute("time","45.989");
-			ts4.setAttribute("classname","Validating New Zeleand");			
+			ts4.setAttribute("classname","Validating New Zeleand2");			
 			tsSuite.appendChild(ts4);
 			ts4.appendChild(failure1);
 			Element ts5 = doc.createElement("testcase");
@@ -135,7 +135,7 @@ public class AppTest
 			Element ts6 = doc.createElement("testcase");
 			ts6.setAttribute("name","test6");
 			ts6.setAttribute("time","45.989");
-			ts6.setAttribute("classname","Validating New Zeleand");			
+			ts6.setAttribute("classname","Validating New Zeleand3");			
 			tsSuite.appendChild(ts6);
 			ts6.appendChild(failure1);
 			

@@ -118,7 +118,7 @@ public class AppTest
 			tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			tf.setOutputProperty(OutputKeys.INDENT, "yes");
 			Writer out = new StringWriter();
-			tf.transform(new DOMSource(doc), new StreamResult("test-output\\Suite\\test2.xml"));
+			tf.transform(new DOMSource(doc), new StreamResult("Junit\\test-output\\Suite\\test2.xml"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

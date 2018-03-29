@@ -114,6 +114,32 @@ public class AppTest
 			tsSuite.appendChild(ts2);
 			ts2.appendChild(failure1);
 			
+			Element ts3 = doc.createElement("testcase");
+			ts3.setAttribute("name","test1");
+			ts3.setAttribute("time","45.989");
+			ts3.setAttribute("classname","Validating New Zeleand");			
+			tsSuite.appendChild(ts3);
+			ts3.appendChild(failure1);
+			Element ts4 = doc.createElement("testcase");
+			ts4.setAttribute("name","test1");
+			ts4.setAttribute("time","45.989");
+			ts4.setAttribute("classname","Validating New Zeleand");			
+			tsSuite.appendChild(ts4);
+			ts4.appendChild(failure1);
+			Element ts5 = doc.createElement("testcase");
+			ts5.setAttribute("name","test1");
+			ts5.setAttribute("time","45.989");
+			ts5.setAttribute("classname","Validating New Zeleand");			
+			tsSuite.appendChild(ts5);
+			ts5.appendChild(failure1);
+			Element ts6 = doc.createElement("testcase");
+			ts6.setAttribute("name","test1");
+			ts6.setAttribute("time","45.989");
+			ts6.setAttribute("classname","Validating New Zeleand");			
+			tsSuite.appendChild(ts6);
+			ts6.appendChild(failure1);
+			
+			
 			Transformer tf = TransformerFactory.newInstance().newTransformer();
 			tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			tf.setOutputProperty(OutputKeys.INDENT, "yes");

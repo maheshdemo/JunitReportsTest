@@ -107,44 +107,58 @@ public class AppTest
 			failure1.appendChild(txt1);
 			
 			
+			
+			
 			Element ts2 = doc.createElement("testcase");
 			ts2.setAttribute("name","test2");
-			ts2.setAttribute("time","45.989");
+			ts2.setAttribute("time","23.415");
 			ts2.setAttribute("classname","Validating New Zeleand");			
 			tsSuite.appendChild(ts2);
-			ts2.appendChild(failure1);
 			
-			Element ts3 = doc.createElement("testcase");
-			ts3.setAttribute("name","test3");
-			ts3.setAttribute("time","45.989");
-			ts3.setAttribute("classname","Validating New Zeleand1");			
-			tsSuite.appendChild(ts3);
-			ts3.appendChild(failure1);
-			Element ts4 = doc.createElement("testcase");
-			ts4.setAttribute("name","test4");
-			ts4.setAttribute("time","45.989");
-			ts4.setAttribute("classname","Validating New Zeleand2");			
-			tsSuite.appendChild(ts4);
-			ts4.appendChild(failure1);
-			Element ts5 = doc.createElement("testcase");
-			ts5.setAttribute("name","test5");
-			ts5.setAttribute("time","45.989");
-			ts5.setAttribute("classname","Validating New Zeleand");			
-			tsSuite.appendChild(ts5);
-			ts5.appendChild(failure1);
-			Element ts6 = doc.createElement("testcase");
-			ts6.setAttribute("name","test6");
-			ts6.setAttribute("time","45.989");
-			ts6.setAttribute("classname","Validating New Zeleand3");			
-			tsSuite.appendChild(ts6);
-			ts6.appendChild(failure1);
+			Element failure2 = doc.createElement("failure");
+			failure2.setAttribute("type","java.lang.AssertionError");
+			failure2.setAttribute("message","Unable to validate this condition against given value...");		
+			ts2.appendChild(failure2);
+			Text txt2 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
+			failure2.appendChild(txt2);
+//			Element ts2 = doc.createElement("testcase");
+//			ts2.setAttribute("name","test2");
+//			ts2.setAttribute("time","45.989");
+//			ts2.setAttribute("classname","Validating New Zeleand");			
+//			tsSuite.appendChild(ts2);
+//			ts2.appendChild(failure1);
+//			
+//			Element ts3 = doc.createElement("testcase");
+//			ts3.setAttribute("name","test3");
+//			ts3.setAttribute("time","45.989");
+//			ts3.setAttribute("classname","Validating New Zeleand1");			
+//			tsSuite.appendChild(ts3);
+//			ts3.appendChild(failure1);
+//			Element ts4 = doc.createElement("testcase");
+//			ts4.setAttribute	("name","test4");
+//			ts4.setAttribute("time","45.989");
+//			ts4.setAttribute("classname","Validating New Zeleand2");			
+//			tsSuite.appendChild(ts4);
+//			ts4.appendChild(failure1);
+//			Element ts5 = doc.createElement("testcase");
+//			ts5.setAttribute("name","test5");
+//			ts5.setAttribute("time","45.989");
+//			ts5.setAttribute("classname","Validating New Zeleand");			
+//			tsSuite.appendChild(ts5);
+//			ts5.appendChild(failure1);
+//			Element ts6 = doc.createElement("testcase");
+//			ts6.setAttribute("name","test6");
+//			ts6.setAttribute("time","45.989");
+//			ts6.setAttribute("classname","Validating New Zeleand3");			
+//			tsSuite.appendChild(ts6);
+//			ts6.appendChild(failure1);
 			
 			
 			Transformer tf = TransformerFactory.newInstance().newTransformer();
 			tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			tf.setOutputProperty(OutputKeys.INDENT, "yes");
 			Writer out = new StringWriter();
-			tf.transform(new DOMSource(doc), new StreamResult("Junit\\test-output\\Suite\\test2.xml"));
+			tf.transform(new DOMSource(doc), new StreamResult(System.getProperty("user.dir")+File.separator+"test-output\\Suite\\test2.xml"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

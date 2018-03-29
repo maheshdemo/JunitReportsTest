@@ -3,4 +3,8 @@
 <testcase classname="Validating New Zeleand" name="test1" time="23.415">
 <failure message="Unable to validate this condition against given value..." type="java.lang.AssertionError">&lt;![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]&gt;</failure>
 </testcase>
+<testcase classname="Validating New Zeleand1" name="test2" time="45.415">
+<failure message="Unable to validate this condition against given value 2 ..." type="java.lang.AssertionError">&lt;![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]&gt;</failure>
+</testcase>
+
 </testsuite>

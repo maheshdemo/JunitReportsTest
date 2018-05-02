@@ -130,7 +130,7 @@ public class AppTest
 			Element failure3 = doc.createElement("failure");
 			failure3.setAttribute("type","java.lang.AssertionError");
 			failure3.setAttribute("message","Unable to validate this condition against given value...3");		
-			ts2.appendChild(failure3);
+			ts3.appendChild(failure3);
 			Text txt3 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
 			failure3.appendChild(txt3);
 			

@@ -80,8 +80,8 @@ public class AppTest
 			tsSuite.setAttribute("hostname","USHYDMMEDAVARA3");
 			tsSuite.setAttribute("ignored","0");
 			tsSuite.setAttribute("name","Test");
-			tsSuite.setAttribute("tests","3");
-			tsSuite.setAttribute("failures","3");
+			tsSuite.setAttribute("tests","2");
+			tsSuite.setAttribute("failures","2");
 			tsSuite.setAttribute("timestamp","28 Mar 2018 06:16:20 GMT");
 			tsSuite.setAttribute("time","45.958");		
 			tsSuite.setAttribute("errors","0");
@@ -93,7 +93,7 @@ public class AppTest
 			Element ts1 = doc.createElement("testcase");
 			ts1.setAttribute("name","test1");
 			ts1.setAttribute("time","23.415");
-			ts1.setAttribute("classname","Validating New Zeleand");			
+			ts1.setAttribute("classname","Validating New Zeleand1");			
 			tsSuite.appendChild(ts1);
 			
 			Element failure1 = doc.createElement("failure");
@@ -109,15 +109,46 @@ public class AppTest
 			Element ts2 = doc.createElement("testcase");
 			ts2.setAttribute("name","test2");
 			ts2.setAttribute("time","23.415");
-			ts2.setAttribute("classname","Validating New Zeleand");			
+			ts2.setAttribute("classname","Validating New Zeleand2");			
 			tsSuite.appendChild(ts2);
 			
 			Element failure2 = doc.createElement("failure");
 			failure2.setAttribute("type","java.lang.AssertionError");
-			failure2.setAttribute("message","Unable to validate this condition against given value...");		
+			failure2.setAttribute("message","Unable to validate this condition against given value...2");		
 			ts2.appendChild(failure2);
 			Text txt2 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
 			failure2.appendChild(txt2);
+			
+			
+			
+			Element ts3 = doc.createElement("testcase");
+			ts3.setAttribute("name","test3");
+			ts3.setAttribute("time","23.415");
+			ts3.setAttribute("classname","Validating New Zeleand3");			
+			tsSuite.appendChild(ts3);
+			
+			Element failure3 = doc.createElement("failure");
+			failure3.setAttribute("type","java.lang.AssertionError");
+			failure3.setAttribute("message","Unable to validate this condition against given value...3");		
+			ts2.appendChild(failure3);
+			Text txt3 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
+			failure3.appendChild(txt3);
+			
+			
+			
+			
+			Element ts4 = doc.createElement("testcase");
+			ts4.setAttribute("name","test2");
+			ts4.setAttribute("time","23.415");
+			ts4.setAttribute("classname","Validating New Zeleand4");			
+			tsSuite.appendChild(ts4);
+			
+			Element failure4 = doc.createElement("failure");
+			failure4.setAttribute("type","java.lang.AssertionError");
+			failure4.setAttribute("message","Unable to validate this condition against given value...4");		
+			ts4.appendChild(failure4);
+			Text txt4 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
+			failure2.appendChild(txt4);
 //			Element ts2 = doc.createElement("testcase");
 //			ts2.setAttribute("name","test2");
 //			ts2.setAttribute("time","45.989");

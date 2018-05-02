@@ -3,10 +3,8 @@ package org.sample;
 import java.io.File;
 import java.io.StringWriter;
 import java.io.Writer;
-
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -14,10 +12,8 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import org.w3c.dom.Comment;
 import org.w3c.dom.Document;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,7 +25,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class AppTest    
  {
 	
-	@Test(enabled=false)
+	@Test
 	public void test3()
 	{
 		System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+File.separator+"drivers/geckodriver.exe");
@@ -157,6 +153,7 @@ public class AppTest
 			Transformer tf = TransformerFactory.newInstance().newTransformer();
 			tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			tf.setOutputProperty(OutputKeys.INDENT, "yes");
+			@SuppressWarnings("unused")
 			Writer out = new StringWriter();
 			tf.transform(new DOMSource(doc), new StreamResult(System.getProperty("user.dir")+File.separator+"test-output\\Suite\\test2.xml"));
 		} catch (Exception e) {

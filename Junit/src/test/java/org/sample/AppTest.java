@@ -7,6 +7,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -32,7 +33,7 @@ public class AppTest
 		FirefoxDriver driver = new FirefoxDriver();
         driver.get("http://google.com/");
         driver.quit();
-       try{ Assert.assertFalse(true,"Unable to verify test");}catch(Exception e){}
+
       
 //        SoftAssert softAssert = new SoftAssert();
 //        softAssert.assertFalse(true, "Unable to verify url pointing to denmark");
@@ -162,5 +163,7 @@ public class AppTest
 		}
         
 	}
+	
+
 	
  }

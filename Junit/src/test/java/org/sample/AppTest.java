@@ -148,7 +148,7 @@ public class AppTest
 			failure4.setAttribute("message","Unable to validate this condition against given value...4");		
 			ts4.appendChild(failure4);
 			Text txt4 = doc.createTextNode("<![CDATA[java.lang.AssertionError: Unable to verify test expected [false] but found [true]at org.sample.AppTest.test1(AppTest.java:50)... Removed 28 stack frames]]>");
-			failure2.appendChild(txt4);
+			failure4.appendChild(txt4);
 //			Element ts2 = doc.createElement("testcase");
 //			ts2.setAttribute("name","test2");
 //			ts2.setAttribute("time","45.989");
